@@ -1,6 +1,6 @@
 # AC Optimal Power Flow (ACOPF) — C++ (Exact Jacobian + Exact Hessian) with Ipopt / Knitro
 
-This is a small, self-contained ACOPF solver written in C++. It loads a MATPOWER `.mat` case file, builds the full nonlinear ACOPF with **exact** first- and second-order derivatives, and writes the solution out as simple CSV files.
+This is self-contained ACOPF solver written in C++. It loads a MATPOWER `.mat` case file, builds the full nonlinear ACOPF with **exact** first- and second-order derivatives, and writes the solution out as simple CSV files.
 
 ---
 
