@@ -30,7 +30,10 @@ make
 ```bash
 make knitro
 ```
-  
+ ```bash
+make cmake
+``` 
+
 Then run
 ```
 ./acopf test_cases/pglib_opf_case30000_gocc.mat
