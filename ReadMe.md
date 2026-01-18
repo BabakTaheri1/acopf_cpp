@@ -4,31 +4,6 @@ This is self-contained ACOPF solver written in C++. It loads a MATPOWER `.mat` c
 
 ---
 
-## What it does
-
-Given a MATPOWER case:
-
-- Variables
-  - Bus voltage magnitudes `Vm`
-  - Bus voltage angles `Va` (radians internally)
-  - Generator active power `Pg`
-  - Generator reactive power `Qg`
-
-- Constraints
-  - AC power balance (P/Q) at each bus
-  - Branch flow limits (implemented as a current-magnitude-squared style constraint for both directions)
-  - Slack/reference bus angle fixed to 0
-
-- Objective
-  - Standard polynomial generation cost (quadratic if available; otherwise linear/constant)
-
-- Output
-  - `results/<case_name>/solution_bus.csv`
-  - `results/<case_name>/solution_gen.csv`
-  - Runtime breakdown (load / init / solve / total)
-
----
-
 ## Dependencies
 
 You’ll need:
