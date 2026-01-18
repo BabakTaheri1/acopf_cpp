@@ -26,7 +26,7 @@ int main(int argc, char** argv)
 
   const fs::path case_path(argv[1]);
   if (!fs::exists(case_path)) {
-    std::cerr << "❌ File not found: " << case_path << "\n";
+    std::cerr << "File not found: " << case_path << "\n";
     return 1;
   }
 
@@ -36,7 +36,7 @@ int main(int argc, char** argv)
   std::error_code ec;
   fs::create_directories(output_dir, ec);
   if (ec) {
-    std::cerr << "❌ Could not create output directory: " << output_dir
+    std::cerr << "Could not create output directory: " << output_dir
               << " (" << ec.message() << ")\n";
     return 1;
   }
@@ -68,12 +68,12 @@ int main(int argc, char** argv)
                             model.nb, model.ng, model.nl,
                             data_s, init_s, solve_s, total_s);
 
-    std::cout << "🧾 Appended run to results/summary.csv\n";
-    std::cout << "✅ Finished. Solver=" << R.solver << " Status=" << R.status_str << "\n";
+    std::cout << "Appended run to results/summary.csv\n";
+    std::cout << "Finished. Solver=" << R.solver << " Status=" << R.status_str << "\n";
     return 0;
   }
   catch (const std::exception& e) {
-    std::cerr << "❌ Fatal error: " << e.what() << "\n";
+    std::cerr << "Fatal error: " << e.what() << "\n";
     return 2;
   }
 }
